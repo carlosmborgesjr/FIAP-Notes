@@ -1,0 +1,46 @@
+aside {
+    width: 300px;
+    height: 100vh;
+    padding-top: 10px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    text-align: center;
+    background-color: var(--bgPrimary);
+    box-shadow: 2px 0px 10px var(--bgPrimary);
+  }
+  
+  aside > img {
+    width: 50%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-group {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+  }
+  
+  textarea {
+    padding: 5px;
+    width: 100%;
+    resize: none;
+    height: 100px;
+  
+    border: 1px solid #ed145b;
+  }
+  
+  .errors {
+    color: #AA0000;
+    font-size: 14px;
+  }
