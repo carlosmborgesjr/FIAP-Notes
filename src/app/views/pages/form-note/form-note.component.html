@@ -1,0 +1,27 @@
+<aside>
+  <img [src]="logoImage" />
+  <h1>{{title}}</h1>
+  <form id="form-notes" 
+      [formGroup]="checkoutForm" (submit)="sendNote()">
+    <div class="input-group">
+      <label>{{subTitle}}</label>
+      <textarea
+        type="text"
+        id="input-note"
+        formControlName="textNote"
+        required
+        placeholder="Digite aqui"
+        [(ngModel)]="textNoteValue"
+      ></textarea>
+      <div *ngIf="textNote?.touched">
+        <div class="errors" *ngIf="textNote?.errors?.['required']">
+          Este campo é obrigatório  
+        </div>
+        <div class="errors" *ngIf="textNote?.errors?.['minlength']">
+          Sua Nota precisa ter, no mínimo, 5 caracteres
+        </div>
+      </div>
+    </div>
+    <button [disabled]="!checkoutForm?.valid">{{statusButton}}</button>
+  </form>
+</aside>
