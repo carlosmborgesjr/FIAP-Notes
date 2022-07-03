@@ -1,0 +1,46 @@
+article {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  position: relative;
+
+  color: #ddd;
+  background-color: #ed145b;
+  box-shadow: 2px 2px 10px #00000099;
+}
+
+article p:first-child {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+article .material-icons {
+  position: absolute;
+  bottom: 5px;
+  
+
+  font-size: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete{
+  right: 5px;
+}
+
+.edit {
+  right: 40px;
+}
+
+article .material-icons:hover {
+  color: #333;
+  transform: scale(1.1);
+  transform: rotate(360deg);
+}
+
+#priority {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: fit-content;
+}
