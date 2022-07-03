@@ -1,0 +1,8 @@
+<article id="{{noteProp.id}}">
+  <p>{{noteProp.date | date: "dd/MMM/yyyy, hh:mm a"}}</p>
+  <p>{{noteProp.text}}</p>
+  <span *ngIf="noteProp.urgent" class="material-icons" id="priority">priority_high</span>
+  <span *ngIf="noteProp.urgent" class="material-icons-edit" id="priority">priority_high</span>
+  <span class="material-icons edit" (click)="editNote(noteProp)"  id="{{noteProp.id}}_edit"> edit </span>
+  <span class="material-icons delete" (click)="confirmRemove()" id="{{noteProp.id}}_delete">  delete_forever </span>
+</article>
